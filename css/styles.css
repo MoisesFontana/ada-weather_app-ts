@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+body {
+   -webkit-font-smoothing: antialiased;
+   background: #222;
+   color: #f0f0f0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+main {
+   margin-top: 3rem;
+   padding: 2rem;
+   max-width: 600px;
+   background-color: #333;
+   border-radius: 10px;
+}
+
+main > h1 {
+   font-size: 3rem;
+   margin-bottom: 1rem;
+   letter-spacing: 0.2rem;
+}
+
+main #search-form form {
+   width: 100%;
+   margin-bottom: 1rem;
+
+   display: flex;
+   gap: 0.4rem;
+}
+
+#input-location {
+   flex: 1;
+}
+
+#input-location, #button-location {
+   padding: 0 8px;
+   height: 1.8rem;
+   border-radius: 5px;
+   border: none;
+   font-size: 1.2rem;
+}
+
+#input-location:focus {
+   outline: #2fbdff solid 2px;
+}
+
+#button-location {
+   background-color: #0474a8;
+   color: #f8f8f8;
+   cursor: pointer;
+}
+
+#button-location:hover {
+   background-color: #24baff;
+   color: #272727;
+   cursor: pointer;
+}
+
+#weather-info {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.weather-data {
+   font-size: 1rem;
+}
+
+.weather-data h2 {
+   letter-spacing: 0.1rem;
+}
+
+.weather-data span {
+   font-size: 3rem;
+   font-weight: 700;
+}
+
+/* Estilização do resultado da pesquisa */
+
+#weather-info {
+   background-color: #4d4d4d;
+   border-radius: 10px;
+   padding-left: 1rem;
+}
+
+.weather-description {
+   font-size: 1.5rem;
+   font-weight: 600;
+
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
