@@ -3,6 +3,8 @@ const input: HTMLInputElement | null =
    document.querySelector("#input-location");
 const weatherInfo = document.querySelector("#weather-info");
 
+const OpenWeatherMapApiKey = "Put Your Key Here!";
+
 const capitalizeFirstLetter = (text: string) => {
    return text.charAt(0).toUpperCase() + text.slice(1);
 };
@@ -21,7 +23,7 @@ form?.addEventListener("submit", async (event) => {
 
    try {
       const response = await fetch(
-         `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=8acd4b62052718c5359c5c0f43ebb3c3&lang=pt_br&units=metric`
+         `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${OpenWeatherMapApiKey}&lang=pt_br&units=metric`
       );
       const data = await response.json();
 

@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const form = document.querySelector("#search-form");
 const input = document.querySelector("#input-location");
 const weatherInfo = document.querySelector("#weather-info");
+const OpenWeatherMapApiKey = "Put Your Key Here!";
 const capitalizeFirstLetter = (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
 };
@@ -24,7 +25,7 @@ form === null || form === void 0 ? void 0 : form.addEventListener("submit", (eve
         return;
     }
     try {
-        const response = yield fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=8acd4b62052718c5359c5c0f43ebb3c3&lang=pt_br&units=metric`);
+        const response = yield fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${OpenWeatherMapApiKey}&lang=pt_br&units=metric`);
         const data = yield response.json();
         const infos = {
             temperature: Math.round(data.main.temp) + "°C",
